@@ -2,17 +2,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 import styles from './styles/styleLogin';
-import Screen1 from './screens/Login';
-//inports of functions and components
+import Login from './screens/Login';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//imports of functions and components
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <View style={styles.containerMain}>  
-    <StatusBar style = 'light' />  
-
-    <Screen1/> 
-    
-    
-    </View>   
-  )
+    <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={Login} />
+    </Stack.Navigator>
+  );
 }
