@@ -3,7 +3,7 @@
 //Esta pagina é a primeira tela do app
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Image, TextInput, Switch} from 'react-native';
-import styles from '../styles/styles';
+import styles from '../styles/styleLogin';
 import { textSize } from '../styles/textSize';
 
 export default function Screen1() {
@@ -18,7 +18,7 @@ export default function Screen1() {
             <View style={styles.containerLogo} >  
                 <Image 
                     style = {styles.imagem}
-                    source = { require('../../assets/Loudred_Logotipo.png')} 
+                    source = { require('../../assets/Loudred-Logotipo.jpg')} 
                 />
             </View> 
 
@@ -34,12 +34,12 @@ export default function Screen1() {
                 />
 
                 <View style = {styles.ladoAlado}> 
-                    <Text style = {styles.standartText}>Guardar usuario e senha</Text>
+                    <Text style = {textSize(17)}>Guardar usuario e senha</Text>
                     <Switch
-                    trackColor={{ false: "#070707", true: "#745ce0" }}
-                    thumbColor={"#f4f3f4"}
-                    value = {isLembrar} 
-                    onValueChange={atualizaValor}
+                        trackColor={{ false: "#a7a7a7", true: "#745ce0" }}
+                        thumbColor={"#f4f3f4"}
+                        value = {isLembrar} 
+                        onValueChange={atualizaValor}
                     />
                 </View>
 

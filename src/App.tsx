@@ -1,8 +1,8 @@
 //Thats the main file of the app, recive all the components and render them
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
-import styles from './styles/styles';
-import Screen1 from './screens/screen1';
+import styles from './styles/styleLogin';
+import Screen1 from './screens/Login';
 //inports of functions and components
 
 export default function App() {

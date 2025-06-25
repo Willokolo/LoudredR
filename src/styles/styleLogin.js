@@ -49,10 +49,12 @@ export default StyleSheet.create({
     },
 
     ladoAlado: { //estilo da view do switch (Mantem os componentes dentro dela um ao lado do outro)
+        width: '100%',
+        height: 'auto',
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'spacre-between',
-        
+        justifyContent: 'space-between',
+        paddingHorizontal: 30
     },
 
     standartText: { //texto padrao
@@ -95,14 +97,13 @@ export default StyleSheet.create({
 
     textTouchable: {
         color: mainRoxo,
-        fontSize: 17,
+        fontSize: 25,
         backgroundcolor: '#fff',
     },
 
     containerRodape: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'flex-end',
         marginBottom: 35,
     }, 
 
