@@ -5,6 +5,7 @@ import { Button, Text, View } from 'react-native';
 import styles from './styles/styleLogin';
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
+import SettingsScreen from './screens/Settings';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //imports of functions and components
@@ -20,6 +21,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Cadastro">
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     
     </NavigationContainer>
