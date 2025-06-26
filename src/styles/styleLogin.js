@@ -2,7 +2,8 @@
 //Esta pasta é utilizada para estilizar todos os componentes do Loudred app.
 import {StyleSheet} from 'react-native'; //import the method to create styles
 
-const mainRoxo = '#745ce0'; //#745ce0 é o tom de roxo principal 
+export const mainRoxo = '#745ce0'; //#745ce0 é o tom de roxo principal 
+export const mainPlaceholder = '#808080'
 
 export default StyleSheet.create({
 // This is the function that creates the styles for the components
@@ -41,7 +42,7 @@ export default StyleSheet.create({
     input: {
         width: 374,
         height: 49,
-        backgroundColor: '#7e7e7e',
+        backgroundColor: '#ebebeb',
         borderRadius: 3,
         padding: 10, // This adds padding inside the input field
         marginBottom: 10,
@@ -97,20 +98,21 @@ export default StyleSheet.create({
 
     textTouchable: {
         color: mainRoxo,
-        fontSize: 25,
+        fontSize: 17,
         backgroundcolor: '#fff',
+        textAlign: 'center'
     },
 
     containerRodape: {
         flexDirection: 'row',
-        alignItems: 'center',
-        marginBottom: 35,
+        alignItems: 'flex-start',
+        justifyContent: 'space-between',
+        paddingHorizontal: 40,
+        marginBottom: 60
     }, 
 
     esqueceu: {
         fontSize: 14,
         color: '#fff',
-        marginRight: 150,
-
     },
 });
