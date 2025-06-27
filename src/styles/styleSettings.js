@@ -14,14 +14,12 @@ export default StyleSheet.create({
   },
   item: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     marginBottom: 25,
   },
   icon: {
-    width: 30,
-    height: 30,
     marginRight: 15,
-    marginTop: 5,
   },
   itemTitle: {
     color: '#fff',
