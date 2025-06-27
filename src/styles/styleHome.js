@@ -70,7 +70,29 @@ export default StyleSheet.create({
     image: {
         width: 70,
         height: 70,
+        marginRight: 5,
         borderRadius: 20,
         resizeMode: 'contain',
+    },
+
+    playlistSugeridas:{
+        width: 150,
+        height: 150,
+        borderRadius: 10,
+        margin: 10,
+        resizeMode: 'contain',
+    },
+
+    txtSeuArtista: {
+        fontSize: 18,
+        color: '#fff',
+    },
+    
+    containerTitle: {
+        width: '100%',
+        height: 40,
+        paddingLeft: 25,
+        alignItems:'flex-start',
+        justifyContent: 'center',
     },
 });

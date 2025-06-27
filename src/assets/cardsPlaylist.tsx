@@ -11,27 +11,30 @@ type Props = {
 };
 
 const imagens = {
-    MyPlay: require('../../assets/jazz.png'),
-    LikedSongs: require('../../assets/jazz.png'),
-    Ryanna: require('../../assets/jazz.png'),
-    Matue: require('../../assets/jazz.png'),
-    Pagode: require('../../assets/jazz.png'),
-    podPah: require('../../assets/jazz.png'),
+  playlist0: require('../../assets/Playlist/playlist0.jpg'),
+  playlist1: require('../../assets/Playlist/playlist1.jpg'),
+  playlist2: require('../../assets/Playlist/playlist2.jpg'),
+  playlist3: require('../../assets/Playlist/playlist3.jpg'),
+  playlist4: require('../../assets/Playlist/playlist4.jpg'),
+  playlist5: require('../../assets/Playlist/playlist5.jpg'),
+  playlist6: require('../../assets/Playlist/playlist6.jpg'),
+  
   
 };
 
 export default function CardsPlaylist({title1, image1, title2, image2}: Props) {
     return(
-        <View style = {styles.ladoAlado}>
-            <View style = {styles.playlistCard}> 
-                <Image source = {imagens[image1]} style = {styles.image}/>
-                <Text style = {textSize(20)}>{title1}</Text>
+        
+            <View style = {styles.ladoAlado}>
+                <View style = {styles.playlistCard}> 
+                    <Image source = {imagens[image1]} style = {styles.image}/>
+                    <Text style = {textSize(15)}>{title1}</Text>
+                </View>
+        
+                <View style = {styles.playlistCard}> 
+                    <Image source = {imagens[image2]} style = {styles.image}/>
+                    <Text style = {textSize(15)}>{title2}</Text>
+                </View>
             </View>
-
-            <View style = {styles.playlistCard}> 
-                <Image source = {imagens[image2]} style = {styles.image}/>
-                <Text style = {textSize(20)}>{title2}</Text>
-            </View>
-        </View>
     )
 };
