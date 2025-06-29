@@ -19,6 +19,10 @@ export default function Login({navigation}: Props) {
         navigation.replace('Cadastro')
     }
 
+    const irParaHome = () => {
+        navigation.replace('Home')
+    }
+
     return (
 
         <View style={styles.containerMain}> 
@@ -54,7 +58,7 @@ export default function Login({navigation}: Props) {
                 </View>
 
                 <View style = {styles.containerBotao}> 
-                    <TouchableOpacity style = {styles.botao}>
+                    <TouchableOpacity style = {styles.botao} onPress={irParaHome}>
                         <Text style = {styles.textoBotao}>Entrar</Text>
                     </TouchableOpacity>
 

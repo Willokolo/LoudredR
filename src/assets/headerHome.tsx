@@ -1,8 +1,12 @@
+import React from 'react';
 import { Text, View,  TouchableOpacity, Image} from 'react-native';
 import styles from '../styles/styleHome';
 
+type Props = {
+  navigation: any; // ou tipagem correta com TS
+};
 
-export default function HeaderHome() {
+export default function HeaderHome({navigation}: Props): React.ReactNode {
 
     return (
               <View style = {styles.headerView}> 
@@ -22,8 +26,8 @@ export default function HeaderHome() {
                   <Text style = {styles.standartText}>Podcast</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity> 
-                  <Image source = {require('../../assets/configIcon.png')} style = {styles.headerIcon}/>
+                <TouchableOpacity onPress={() => {navigation.navigate("Settings")}}> 
+                  <Image source = {require('../../assets/configIcon.png')} style = {styles.headerIconSmall}/>
                 </TouchableOpacity>
                 
               </View>

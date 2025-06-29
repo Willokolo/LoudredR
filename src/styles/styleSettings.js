@@ -7,11 +7,6 @@ export default StyleSheet.create({
     paddingTop: 50,
     paddingHorizontal: 20,
   },
-  title: {
-    color: '#fff',
-    fontSize: 24,
-    marginBottom: 30,
-  },
   item: {
     flexDirection: 'row',
     alignItems: 'center',

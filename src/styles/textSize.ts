@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleProp, StyleSheet, TextStyle } from "react-native";
 
-export const textSize = (size: number) => ({
+export const textSize = (size: number): StyleProp<TextStyle> => ({
     fontSize: size,
-    color: '#fff', // Default text color
-    fontWeight: 'numbers',
+    color: '#fff',
+    fontWeight: '500'
 });

@@ -6,7 +6,6 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 export default function SettingsScreen() {
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.title}>Configurações</Text>
 
       <TouchableOpacity style={styles.item}>
         <FontAwesome name='user-circle' color={'#fff'} size={40} style={styles.icon}/>

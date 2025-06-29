@@ -19,6 +19,10 @@ export default function Cadastro({navigation}: Props) {
         navigation.replace('Login')
     }
 
+    const irParaHome = () => {
+        navigation.replace('Home')
+    }
+
     return (
 
         <View style={styles.containerMain}>
@@ -57,7 +61,7 @@ export default function Cadastro({navigation}: Props) {
 
                 <View style = {styles.containerBotao}> 
 
-                    <TouchableOpacity style = {styles.botao}>
+                    <TouchableOpacity style = {styles.botao} onPress={irParaHome}>
                         <Text style = {styles.textoBotao}>Cadastrar</Text>
                     </TouchableOpacity>
 

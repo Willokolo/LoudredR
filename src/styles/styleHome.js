@@ -31,6 +31,12 @@ export default StyleSheet.create({
         resizeMode: 'contain',
     },
 
+    headerIconSmall: {
+        width: 30,
+        height: 30,
+        resizeMode: 'contain',
+    },
+
     headerView: {
         flexDirection: 'row',
         alignItems: 'center',

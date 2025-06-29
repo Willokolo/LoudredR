@@ -3,8 +3,8 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Text, View,  TouchableOpacity, Image} from 'react-native';
 import styles from './styles/styleHome';
-import Home from './screens/Home';
-import Serch from './screens/search'
+import Home from './screens/home';
+import Search from './screens/search'
 import Biblioteca from './screens/biblioteca'
 import Login from './screens/Login';
 import Cadastro from './screens/Cadastro';
@@ -23,10 +23,9 @@ function MainTabNavigation() {
   return(
     <Tab.Navigator>
       <Tab.Screen 
-        name = 'homeStack' 
-        component={Home}
+        name = 'homeTab' component={Home}
           options = {{headerShown: true,
-          header: HeaderHome,
+          header: ({navigation}) => <HeaderHome navigation={navigation}/>,
           tabBarIcon: ({color}) => <FontAwesome color = {color} name = 'home' size = {24} />, 
           tabBarLabel: 'Inicio',
           tabBarActiveTintColor: '#fff',
@@ -34,38 +33,37 @@ function MainTabNavigation() {
           tabBarStyle: {
             backgroundColor: '#050505',
             marginBottom: 10, 
-        }
-      }}
-    />
+          }
+        }}
+      />
 
-    <Tab.Screen 
-      name = 'serchStack' 
-      component={Serch}
-      options = {{headerShown: false,
-        tabBarIcon: ({color}) => <FontAwesome color = {color} name = 'search' size = {24} />, 
-        tabBarLabel: 'Pesquisar',
-        tabBarActiveTintColor: '#fff',
-        tabBarInactiveTintColor: '#808080',
-        tabBarStyle: {
-          backgroundColor: '#050505',
-          marginBottom: 10, 
-        }
-      }}
-    />
-    <Tab.Screen 
-      name = 'bibliotecaStack' 
-      component={Biblioteca}  
-      options = {{headerShown: false,
-        tabBarIcon: ({color}) => <FontAwesome color = {color} name = 'bookmark' size = {24} />, 
-        tabBarLabel: 'Biblioteca',
-        tabBarActiveTintColor: '#fff',
-        tabBarInactiveTintColor: '#808080',
-        tabBarStyle: {
-          backgroundColor: '#050505',
-          marginBottom: 10, 
-        }
-      }}
-    />
+      <Tab.Screen 
+        name = 'searchTab' component={Search}
+        options = {{headerShown: false,
+          tabBarIcon: ({color}) => <FontAwesome color = {color} name = 'search' size = {24} />, 
+          tabBarLabel: 'Pesquisar',
+          tabBarActiveTintColor: '#fff',
+          tabBarInactiveTintColor: '#808080',
+          tabBarStyle: {
+            backgroundColor: '#050505',
+            marginBottom: 10, 
+          }
+        }}
+      />
+
+      <Tab.Screen 
+        name = 'bibliotecaTab' component={Biblioteca}  
+        options = {{headerShown: false,
+          tabBarIcon: ({color}) => <FontAwesome color = {color} name = 'bookmark' size = {24} />, 
+          tabBarLabel: 'Biblioteca',
+          tabBarActiveTintColor: '#fff',
+          tabBarInactiveTintColor: '#808080',
+          tabBarStyle: {
+            backgroundColor: '#050505',
+            marginBottom: 10, 
+          }
+        }}
+      />
 
     </Tab.Navigator>
   )
@@ -80,7 +78,15 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Cadastro">
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen name='Home' component={MainTabNavigation}/>
+        <Stack.Screen name="Settings" component={SettingsScreen} 
+          options={{
+            headerShown: true,
+            headerTintColor: '#fff',
+            headerStyle: {backgroundColor: '#050505'},
+            headerTitle: 'Configurações'
+          }}
+        />
       </Stack.Navigator>
     
     </NavigationContainer>
